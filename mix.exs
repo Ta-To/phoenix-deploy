@@ -4,7 +4,7 @@ defmodule PhoenixDeploy.MixProject do
   def project do
     [
       app: :phoenix_deploy,
-      version: "0.2.0",
+      version: "0.2.4",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -45,7 +45,7 @@ defmodule PhoenixDeploy.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:distillery, "~> 2.1"}
+      {:distillery, github: "bitwalker/distillery"},
     ]
   end
 

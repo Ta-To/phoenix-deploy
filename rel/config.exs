@@ -52,6 +52,6 @@ release :phoenix_deploy do
     :runtime_tools
   ]
   set commands: [
-    seed: "rel/commands/migrate.sh"
+    migrate: "rel/commands/migrate.sh"
   ]
 end
