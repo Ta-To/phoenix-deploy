@@ -9,8 +9,8 @@ services:
     command: tail -f /dev/null
     env_file:
       - ./.env
-    ports:
-      - "4000:4000"
+    #ports:
+    #  - "4000:4000"
     logging:
       driver: "json-file"
       options:
@@ -23,11 +23,11 @@ services:
     image: tontenkan_app
     container_name: practice_phoenix_deploy_server
     shm_size: 512m
-    # ports:
-    #   - "4000:4000"
+    ports:
+      - "4000:4000"
     volumes:
       - ./:/srv/
-    command: /srv/local_deploy/bin/phoenix_deploy foreground
+    command: ./deploy/bin/phoenix_deploy foreground
 
   db:
     image: postgres
